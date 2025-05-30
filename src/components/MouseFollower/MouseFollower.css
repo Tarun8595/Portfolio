@@ -1,0 +1,11 @@
+.mouse-follow-line {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    background-color: #ff6b6b;
+    transform-origin: left center;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  

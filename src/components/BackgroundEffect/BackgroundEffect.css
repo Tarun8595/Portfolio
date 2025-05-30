@@ -1,0 +1,20 @@
+.background-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    z-index: 100000;
+  }
+  
+  
