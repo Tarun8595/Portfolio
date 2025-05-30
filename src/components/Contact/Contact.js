@@ -137,7 +137,7 @@ export default function Contact() {
                   <input type="checkbox" id="privacy" required />
                   <label htmlFor="privacy">
                     I've accepted the{" "}
-                    <a href="#" className="privacy-link">
+                    <a href="tarun_work" className="privacy-link">
                       privacy policy
                     </a>
                     .*
@@ -167,14 +167,14 @@ export default function Contact() {
                 </p>
               </div>
               <div className="social-icons">
-                  <a href="#" className="social-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670133.png"></img>
+                  <a href="https://web.whatsapp.com/" className="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670133.png" alt="whatsapp"></img>
                   </a>
-                  <a href="#" className="social-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/128/11376/11376446.png"></img>
+                  <a href="https://github.com/Tarun8595" className="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/11376/11376446.png" alt="github"></img>
                   </a>
-                  <a href="#" className="social-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670129.png"></img>
+                  <a href="https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" className="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670129.png" alt="linkedin"></img>
                   </a>
               </div>
             </div>

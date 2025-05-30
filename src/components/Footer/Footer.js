@@ -105,7 +105,7 @@ const Footer = () => {
                     {socialLinks.map((item, index) => (
                       <a
                         key={item}
-                        href="#"
+                        href="home.html"
                         className={`nav-link ${isVisible ? "animate" : ""}`}
                         style={{ animationDelay: `${500 + index * 100}ms` }}
                       >
@@ -124,7 +124,7 @@ const Footer = () => {
                 style={{ animationDelay: "600ms" }}
               >
                 <div className="sphere-wrapper">
-                  <img src="lines-unscreen.gif"></img>
+                  <img src="lines-unscreen.gif" alt="3d model"></img>
                 </div>
               </div>
             </div>

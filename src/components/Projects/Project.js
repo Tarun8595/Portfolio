@@ -22,97 +22,101 @@ const Project = () => {
 
   // Refs are stable; safe to omit from dependencies
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    const experience = experienceRef.current;
-    const image = imageRef.current;
-    const containers = {
-      W: letterContainers.W.current,
-      O: letterContainers.O.current,
-      R: letterContainers.R.current,
-      K: letterContainers.K.current,
-    };
+useEffect(() => {
+  const experience = experienceRef.current;
+  const image = imageRef.current;
+  const containers = {
+    W: letterContainers.W.current,
+    O: letterContainers.O.current,
+    R: letterContainers.R.current,
+    K: letterContainers.K.current,
+  };
 
-    gsap.set(image, { scale: 1 });
-    gsap.set([containers.W, containers.O, containers.R, containers.K], {
-      x: 0,
-      opacity: 1,
-    }, []);
+  gsap.set(image, { scale: 1 });
+  gsap.set([containers.W, containers.O, containers.R, containers.K], {
+    x: 0,
+    opacity: 1,
+  });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: experience,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1.5,
-        pin: true,
-        anticipatePin: 1,
-        onUpdate: (self) => {
-          if (self.progress > 0.5) {
-            const progress = (self.progress - 0.5) * 2;
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: experience,
+      start: "top top",
+      end: "bottom top",
+      scrub: 1.5,
+      pin: true,
+      anticipatePin: 1,
+      onUpdate: (self) => {
+        if (self.progress > 0.5) {
+          const progress = (self.progress - 0.5) * 2;
 
-            const getPosition = (i, total, radius, direction) => {
-              const angle = (i / total) * Math.PI;
-              const x = Math.cos(angle) * radius * direction;
-              const y = Math.sin(angle) * radius * 0.08;
-              return { x, y };
-            };
+          const getPosition = (i, total, radius, direction) => {
+            const angle = (i / total) * Math.PI;
+            const x = Math.cos(angle) * radius * direction;
+            const y = Math.sin(angle) * radius * 0.08;
+            return { x, y };
+          };
 
-            const animateLetters = (container, direction, spread) => {
-              gsap.to(Array.from(container.children), {
-                x: (i) => {
-                  if (i === 0) return 0;
-                  const pos = getPosition(i, copies, spread * progress, direction);
-                  return pos.x;
-                },
-                y: (i) => {
-                  if (i === 0) return 0;
-                  const pos = getPosition(i, copies, spread * progress, direction);
-                  return pos.y;
-                },
-                rotateY: (i) => (i === 0 ? 0 : i * 5 * progress * direction),
-                opacity: (i) => (i === 0 ? 1 : 1 + Math.sin(i * 0.01) * 0.2),
-                scale: (i) => (i === 0 ? 1 : 0.5 - progress * 0.1),
-                duration: 0.5,
-                ease: "power1.out",
-              });
-            };
+          const animateLetters = (container, direction, spread) => {
+            gsap.to(Array.from(container.children), {
+              x: (i) => {
+                if (i === 0) return 0;
+                const pos = getPosition(i, copies, spread * progress, direction);
+                return pos.x;
+              },
+              y: (i) => {
+                if (i === 0) return 0;
+                const pos = getPosition(i, copies, spread * progress, direction);
+                return pos.y;
+              },
+              rotateY: (i) => (i === 0 ? 0 : i * 5 * progress * direction),
+              opacity: (i) => (i === 0 ? 1 : 1 + Math.sin(i * 0.01) * 0.2),
+              scale: (i) => (i === 0 ? 1 : 0.5 - progress * 0.1),
+              duration: 0.5,
+              ease: "power1.out",
+            });
+          };
 
-            animateLetters(containers.W, -1, 600);
-            animateLetters(containers.O, -1, 600);
-            animateLetters(containers.R, 1, 600);
-            animateLetters(containers.K, 1, 600);
-          } else {
-            gsap.to(
-              [
-                containers.W.children,
-                containers.O.children,
-                containers.R.children,
-                containers.K.children,
-              ],
-              {
-                x: 0,
-                y: 0,
-                rotateY: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.3,
-                ease: "power2.inOut",
-              }
-            );
-          }
-        },
+          animateLetters(containers.W, -1, 600);
+          animateLetters(containers.O, -1, 600);
+          animateLetters(containers.R, 1, 600);
+          animateLetters(containers.K, 1, 600);
+        } else {
+          gsap.to(
+            [
+              containers.W.children,
+              containers.O.children,
+              containers.R.children,
+              containers.K.children,
+            ],
+            {
+              x: 0,
+              y: 0,
+              rotateY: 0,
+              opacity: 1,
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.inOut",
+            }
+          );
+        }
       },
-    });
+    },
+  });
 
-    tl.to(image, {
-      scale: 11,
-      ease: "none",
-    });
+  tl.to(image, {
+    scale: 11,
+    ease: "none",
+  });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+  return () => {
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+  };
+
+// Refs are stable, so safe to ignore eslint warning
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
+
 
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isEffectEnabled] = useState(true); // No setter needed
