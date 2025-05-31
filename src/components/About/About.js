@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react"
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import "./About.css"
-import myImage from '../../assets/mywall.JPG';
 
 
 const About = () => {
@@ -75,7 +74,7 @@ const About = () => {
           className="profile-image"
           style={{ opacity: imageOpacity }}
         >
-          <img src={myImage} alt="Profile" />
+          <img src="https://i.pinimg.com/736x/d4/87/82/d48782516e365280d61c8eaf9c28bd78.jpg" alt="Profile" />
         </motion.div>
 
         <motion.div className="content-wrapper" style={{ opacity: contentOpacity }}>
@@ -89,7 +88,7 @@ const About = () => {
               I'm ready to bring your ideas to life and add a touch of originality to the online space.
             </p>
           </div>
-          <img src="my.jpg" className="content-img" alt="about_image"></img>
+          <img src="https://i.pinimg.com/736x/a7/94/7f/a7947f1ebd1d3a8ad5c4a94f6d7c9f9d.jpg" className="content-img" alt="about_image"></img>
         </motion.div>
         <div className="more-about">
           <span>Let's make your project special!</span>a
