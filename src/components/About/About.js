@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react"
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import "./About.css"
-import myImg from './public/mywall.jpg';
+import myImage from '../../assets/mywall.JPG';
+
 
 const About = () => {
   const controls = useAnimation()
@@ -74,7 +75,7 @@ const About = () => {
           className="profile-image"
           style={{ opacity: imageOpacity }}
         >
-          <img src={myImg} alt="Profile" />
+          <img src={myImage} alt="Profile" />
         </motion.div>
 
         <motion.div className="content-wrapper" style={{ opacity: contentOpacity }}>
