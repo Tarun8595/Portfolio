@@ -138,13 +138,13 @@ const work = [
   ["booth-app.png", "#FDE910", "Booth App", "A social media app with chat, calls, notifications, cloud features, games, and payments. Built with HTML, CSS, Bootstrap.", "100%", "1 days", "One", "https://booth-app.onrender.com/"],
   ["todo-list.png", "#D1E231", "Todo List", "A task manager with two cards for setting and viewing task details, notes, and checklists. Built with HTML, CSS, JS.", "90%", "3 day", "One", "https://todo-qqh9.onrender.com/"],
   ["music.png", "#A8E6CF", "Music Player", "A frontend design of a music player with playlist, lyrics, favorites, and search features. Built with HTML, CSS, JS.", "85%", "2 days", "One", "https://music-player-unty.onrender.com/"],
-  ["slci-project.png", "#8A2BE2", "SLCI Data Manager", "A web app to manage student data: registration, inquiry, fees, and receipts. Built with HTML, CSS, Bootstrap, JS, Django, MySQL.", "90%", "5 days", "Multi", "https://example.com/slci-project"],
+  ["slci-project.png", "#8A2BE2", "SLCI Data Manager", "A web app to manage student data: registration, inquiry, fees, and receipts. Built with HTML, CSS, Bootstrap, JS, Django, MySQL.", "90%", "5 days", "Multi", "https://github.com/Tarun8595/Data_management"],
   ["multi-step.png", "#6A0DAD", "Profile Manager", "A multi-step user profile system with view and update features after login. Built with HTML, CSS, Bootstrap, JS, Django, MongoDB.", "95%", "2 days", "Two", "https://multi-step-profile-lmc7.onrender.com/"],
   ["kutto.png", "#9B59B6", "Kutto Clone", "A pet website to buy, sell, or adopt dogs. Built with HTML and CSS.", "80%", "3 days", "Multi", "https://kutto.onrender.com/index.html"],
 ];
 
 // =================== Styles ===================
-
+  
 const container = {
   paddingBottom: 20,
   paddingTop: 50,

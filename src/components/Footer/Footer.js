@@ -52,7 +52,10 @@ const Footer = () => {
 
   // Navigation links data
   const mainNavLinks = ["HOME", "ABOUT", "WORKS","CONTACT"]
-  const socialLinks = ["Github","LINKEDIN", "Email"]
+  const socialLinks = [
+  { name: "Github", url: "https://github.com/Tarun8595" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" },
+]
 
   return (
     <div className="footer-wrapper">
@@ -103,15 +106,18 @@ const Footer = () => {
                 >
                   <nav className="nav-list">
                     {socialLinks.map((item, index) => (
-                      <a
-                        key={item}
-                        href="home.html"
-                        className={`nav-link ${isVisible ? "animate" : ""}`}
-                        style={{ animationDelay: `${500 + index * 100}ms` }}
-                      >
-                        {item}
-                      </a>
+                    <a
+                      key={item.name}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`nav-link ${isVisible ? "animate" : ""}`}
+                      style={{ animationDelay: `${500 + index * 100}ms` }}
+                    >
+                      {item.name}
+                    </a>
                     ))}
+
                   </nav>
                 </div>
               </div>

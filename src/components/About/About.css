@@ -87,8 +87,9 @@
 }
 .content-img{
   width: 30%;
-  height: 70vh;
+  height: 82vh;
   z-index: 10000;
+  border-radius: 5px;
 }
 
 .intro-text {

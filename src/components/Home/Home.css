@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Bebas Neue", serif;
   margin: 0;
   padding: 0;
   background-color: #0e0e0e;
@@ -36,6 +36,8 @@ body {
 .Home_content {
   position: relative;
   z-index: 10;
+  font-family: "Bebas Neue", serif;
+  letter-spacing: 0.3rem;
 }
 
 .scroll-btn{

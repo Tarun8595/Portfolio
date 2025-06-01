@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Instagram, Github } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import "./Navbar.css";
 
 const MenuIcon = ({ isOpen, toggleMenu }) => (
@@ -159,7 +159,7 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
             >
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/tarun-kushwaha-7519a131a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -168,16 +168,7 @@ const Navbar = () => {
                 <Linkedin size={32} />
               </motion.a>
               <motion.a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Instagram size={32} />
-              </motion.a>
-              <motion.a
-                href="https://github.com"
+                href="https://github.com/Tarun8595"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}

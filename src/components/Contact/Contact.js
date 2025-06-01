@@ -167,9 +167,6 @@ export default function Contact() {
                 </p>
               </div>
               <div className="social-icons">
-                  <a href="https://web.whatsapp.com/" className="social-icon">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670133.png" alt="whatsapp"></img>
-                  </a>
                   <a href="https://github.com/Tarun8595" className="social-icon">
                     <img src="https://cdn-icons-png.flaticon.com/128/11376/11376446.png" alt="github"></img>
                   </a>
