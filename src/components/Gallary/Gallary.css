@@ -65,26 +65,27 @@ section {
     text-align: center;
     margin: 50px auto;
     z-index: 1000000 !important;
-  }
-  
-  .my_Gallary_section img {
-    width: 1000px;
-    height: 300px;
-    object-fit: cover;
-    /* object-position: center; */
-    border-radius: 10px;
-    margin-top: 20px;
-
-
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 0.1rem;
     h1 {
-        font-size: 2.5em;
-        color: #333;
+      font-size: 2.5em;
+        color: #d9d9d9;
+        letter-spacing: 0.3rem;
       }
       
       p {
         font-size: 1.2em;
-        color: #666;
+        color: #d9d9d9;
       }
+  }
+  
+  .my_Gallary_section img {
+    width: 1000px;
+    height: 400px;
+    object-fit: cover;
+    /* object-position: center; */
+    border-radius: 5px;
+    /* margin-top: 20px; */
   }  
 
   .flex-container {

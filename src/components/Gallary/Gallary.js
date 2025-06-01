@@ -88,10 +88,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
             <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -500))}>
               <div className="my_Gallary_section">
                 <h1>Welcome</h1>
-                <p>Enjoy a stunning gallery with on-scroll animations.</p>
+                <p>Take a tour of our finest memories</p>
                 <img
-                  src="img_0788.JPG"
-                  alt="Girl 1" 
+                  className="welcome-img"
+                  src="https://i.pinimg.com/736x/3c/3f/91/3c3f917bc07cb5c663f178f05250596f.jpg"
+                  alt="welcome-img" 
                 />
               </div>
             </Animator>
@@ -102,10 +103,10 @@ function ParallaxText({ children, baseVelocity = 100 }) {
             <Animator animation={ZoomInScrollOut}>
               <div className="my_Gallary_section">
                 <h1>Grace in Nature</h1>
-                <p>A serene moment captured in a natural setting.</p>
+                <p>From vibrant colors to silent emotions — our lens sees it all</p>
                 <img
-                  src="https://i.pinimg.com/236x/5f/de/3e/5fde3ee3039b0105b1209491a97333a0.jpg"
-                  alt="Girl 2"
+                  src="https://i.pinimg.com/736x/67/c2/24/67c22456cdd6f835422ce1a26b8153ee.jpg"
+                  alt="man-in-nature"
                 />
               </div>
             </Animator>
@@ -115,11 +116,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
           <ScrollPage page={2}>
             <Animator animation={FadeUp}>
               <div className="my_Gallary_section">
-                <h1>Peaceful Reflection</h1>
-                <p>Take a deep breath and appreciate the calm.</p>
+                <h1>Beauty</h1>
+                <p>Experience the magic of everyday life through our curated collection.</p>
                 <img
-                  src="https://i.pinimg.com/736x/33/c4/9f/33c49f753aa212335494bfa546d4a8a5.jpg"
-                  alt="Girl 3"
+                  src="https://i.pinimg.com/736x/94/b2/83/94b283a81d6227412adcdcbaabf58917.jpg"
+                  alt="beauty-work"
                 />
               </div>
             </Animator>
@@ -128,33 +129,33 @@ function ParallaxText({ children, baseVelocity = 100 }) {
           {/* Page 3 */}
           <ScrollPage page={3}>
   <div className="my_Gallary_section">
-    <h1>Dynamic Entry</h1>
+    <h1>Stories</h1>
     <p>
-      Watch as elements gracefully enter and leave the frame with smooth animations.
+      Let your eyes do the reading — visual tales await.
     </p>
     <div className="flex-container">
       <Animator animation={MoveIn(-1000, 0)}>
         <img
-          src="https://i.pinimg.com/236x/d3/4f/21/d34f2148dc912f471c18b32f27a34e67.jpg"
-          alt="Girl 4"
+          src="https://i.pinimg.com/736x/30/fd/9c/30fd9cb02596a9ffbdde698fcd61fc9f.jpg"
+          alt="tarun-img1"
         />
       </Animator>
       <Animator animation={MoveIn(1000, 0)}>
         <img
-          src="https://i.pinimg.com/474x/23/81/2b/23812b3265290f69c51dfb4a417d53c5.jpg"
-          alt="Girl 5"
+          src="https://i.pinimg.com/736x/c8/41/42/c841425366b905d22488c23b88b7e017.jpg"
+          alt="my-group"
         />
       </Animator>
       <Animator animation={MoveOut(1000, 0)}>
         <img
-          src="https://i.pinimg.com/474x/79/62/21/796221b2c7320e8f7b99b18a66fd3804.jpg"
-          alt="Girl 6"
+          src="https://i.pinimg.com/736x/42/eb/0b/42eb0b6f13fbca95a8a89e5878073075.jpg"
+          alt="tarun-rider"
         />
       </Animator>
       <Animator animation={MoveOut(-1000, 0)}>
         <img
-          src="https://i.pinimg.com/236x/96/98/34/969834e7faa9f074a7565e9a847d43b6.jpg"
-          alt="Girl 7"
+          src="https://i.pinimg.com/736x/15/3a/4a/153a4a4e3a3a28f7c25e3a5a0cf8f945.jpg"
+          alt="tarun-guiter"
         />
       </Animator>
     </div>
@@ -166,11 +167,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
           <ScrollPage page={4}>
             <Animator animation={batch(Fade(), Sticky())}>
               <div className="my_Gallary_section">
-                <h1>Farewell</h1>
-                <p>End your journey with a smile and come back anytime!</p>
+                <h1>Remember</h1>
+                <p>A journey from the lens to the heart.</p>
                 <img
-                  src="https://i.pinimg.com/236x/a6/b7/35/a6b7358705c30ed4e0e5482670446394.jpg"
-                  alt="Girl 8"
+                  src="https://i.pinimg.com/736x/de/67/49/de6749c6dab2db4d63b80e8bd95d91d8.jpg"
+                  alt="last-img"
                 />
               </div>
             </Animator>

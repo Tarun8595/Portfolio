@@ -71,10 +71,10 @@ const About = () => {
         </div>
 
         <motion.div
-          className="a"
+          className="profile-image"
           style={{ opacity: imageOpacity }}
         >
-          <img src="child-t.png" alt="Profile" />
+          <img src="Child-tarun.png" alt="Profile" />
         </motion.div>
 
         <motion.div className="content-wrapper" style={{ opacity: contentOpacity }}>
