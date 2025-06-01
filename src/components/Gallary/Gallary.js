@@ -90,8 +90,8 @@ function ParallaxText({ children, baseVelocity = 100 }) {
                 <h1>Welcome</h1>
                 <p>Enjoy a stunning gallery with on-scroll animations.</p>
                 <img
-                  src="img_0788.jpg"
-                  alt="Girl 1"
+                  src="img_0788.JPG"
+                  alt="Girl 1" 
                 />
               </div>
             </Animator>
