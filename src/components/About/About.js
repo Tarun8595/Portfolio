@@ -71,7 +71,7 @@ const About = () => {
         </div>
 
         <motion.div
-          className="profile-image"
+          className="a"
           style={{ opacity: imageOpacity }}
         >
           <img src="child-t.png" alt="Profile" />
