@@ -7,10 +7,13 @@ const Footer = () => {
   const footerRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
   const [currentTime, setCurrentTime] = useState("")
+  const [currentDate, setCurrentDate] = useState("")
 
-  // Update time function
+  // Update time and date function
   const updateTime = () => {
     const now = new Date()
+
+    // Format time string for Delhi, India
     const timeString = now.toLocaleTimeString("en-US", {
       timeZone: "Asia/Kolkata",
       hour12: false,
@@ -18,6 +21,15 @@ const Footer = () => {
       minute: "2-digit",
     })
     setCurrentTime(`Delhi, INDIA ${timeString}`)
+
+    // Format date string for Delhi, India
+    const dateString = now.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "Asia/Kolkata",
+    })
+    setCurrentDate(`${dateString}`)
   }
 
   // Intersection Observer for animations
@@ -38,7 +50,7 @@ const Footer = () => {
     return () => observer.disconnect()
   }, [isVisible])
 
-  // Update time every minute
+  // Update time & date every minute
   useEffect(() => {
     updateTime()
     const timeInterval = setInterval(updateTime, 60000)
@@ -52,16 +64,16 @@ const Footer = () => {
 
   // Navigation links data
   const mainNavLinks = [
-  { label: "HOME", id: "home" },
-  { label: "ABOUT", id: "about" },
-  { label: "PROJECTS", id: "projects" },
-  { label: "CONTACT", id: "contact" }
-]
+    { label: "HOME", id: "home" },
+    { label: "ABOUT", id: "about" },
+    { label: "PROJECTS", id: "projects" },
+    { label: "CONTACT", id: "contact" },
+  ]
 
   const socialLinks = [
-  { name: "Github", url: "https://github.com/Tarun8595" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" },
-]
+    { name: "Github", url: "https://github.com/Tarun8595" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" },
+  ]
 
   return (
     <div className="footer-wrapper">
@@ -102,7 +114,6 @@ const Footer = () => {
                       >
                         {item.label}
                       </a>
-
                     ))}
                   </nav>
                 </div>
@@ -113,18 +124,17 @@ const Footer = () => {
                 >
                   <nav className="nav-list">
                     {socialLinks.map((item, index) => (
-                    <a
-                      key={item.name}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`nav-link ${isVisible ? "animate" : ""}`}
-                      style={{ animationDelay: `${500 + index * 100}ms` }}
-                    >
-                      {item.name}
-                    </a>
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`nav-link ${isVisible ? "animate" : ""}`}
+                        style={{ animationDelay: `${500 + index * 100}ms` }}
+                      >
+                        {item.name}
+                      </a>
                     ))}
-
                   </nav>
                 </div>
               </div>
@@ -137,7 +147,7 @@ const Footer = () => {
                 style={{ animationDelay: "600ms" }}
               >
                 <div className="sphere-wrapper">
-                  <img src="lines-unscreen.gif" alt="3d model"></img>
+                  <img src="lines-unscreen.gif" alt="3d model" />
                 </div>
               </div>
             </div>
@@ -177,7 +187,7 @@ const Footer = () => {
           <div className="footer-container">
             <div className="bottom-content">
               <div className={`fade-in-element ${isVisible ? "animate" : ""}`} style={{ animationDelay: "1000ms" }}>
-               | May 2025
+                {currentDate}
               </div>
               <div className={`fade-in-element ${isVisible ? "animate" : ""}`} style={{ animationDelay: "1100ms" }}>
                 {currentTime}
