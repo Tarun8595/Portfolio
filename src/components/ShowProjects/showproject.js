@@ -35,7 +35,8 @@ function Card({ imgSrc, splashColor, i, name, description, complete, duration, p
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.3, 1, 1, 0.3]);
 
   return (
-    <div ref={ref} style={sectionContainer}>
+    <section id="projects">
+       <div ref={ref} style={sectionContainer}>
       {/* Left Text */}
       <motion.div
         style={leftText}
@@ -105,6 +106,7 @@ function Card({ imgSrc, splashColor, i, name, description, complete, duration, p
         </div>
       </motion.div>
     </div>
+    </section>
   );
 }
 

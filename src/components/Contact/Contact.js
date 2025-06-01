@@ -73,7 +73,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-wrapper">
+    <section id="contact">
+      <div className="contact-wrapper">
       {/* Main Contact Section */}
       <section ref={sectionRef} className={`contact-section ${isVisible ? "animate-in" : ""}`}>
         <div className="contact-content">
@@ -179,5 +180,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </section>
   )
 }

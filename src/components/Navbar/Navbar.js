@@ -98,7 +98,7 @@ const Navbar = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <img className="logo-img" src="tarun-robot.png" alt="Logo" />
+        <a href="home"><img className="logo-img" src="tarun-robot.png" alt="Logo" /></a>
       </motion.div>
 
       <MenuIcon isOpen={isOpen} toggleMenu={toggleMenu} />
@@ -135,16 +135,16 @@ const Navbar = () => {
                   <motion.div className="menuitem_div">
                     <motion.ul>
                       <motion.li>
-                        <a href="/home">Home</a>
+                        <a href="#home">Home</a>
                       </motion.li>
                       <motion.li>
-                        <a href="/about">About</a>
+                        <a href="#about">About</a>
                       </motion.li>
                       <motion.li>
-                        <a href="/projects">Projects</a>
+                        <a href="#projects">Projects</a>
                       </motion.li>
                       <motion.li>
-                        <a href="/contact">Contact</a>
+                        <a href="#contact">Contact</a>
                       </motion.li>
                     </motion.ul>
                   </motion.div>

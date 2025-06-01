@@ -41,19 +41,21 @@ export default function Home() {
 
   return (
     <>
-    <div className={`Home_main_container ${isVisible ? "visible" : ""}`}>
+    <section id="home">
+      <div className={`Home_main_container ${isVisible ? "visible" : ""}`}>
       <Navbar />
       <div className="Home_content">
         <h1>{typewriterText}</h1>
       </div>
       <motion.p className="scroll-btn" animate={bounceAnimation}>Scroll Down</motion.p>
-    </div>
-    <About />
-    <Gallary />
-    <Project />
-    <ScrollTriggered />
-    <Contact />
-    <Footer />
+      </div>
+      <About />
+      <Gallary />
+      <Project />
+      <ScrollTriggered />
+      <Contact />
+      <Footer />
+    </section>
     </>
   )
 }

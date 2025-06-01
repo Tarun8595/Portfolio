@@ -53,7 +53,7 @@ const About = () => {
   const contentOpacity = useTransform(scrollYProgress, [0.3, 0.8, 1], [0, 0.5, 1])
 
   return (
-    <section ref={containerRef} className="about-section">
+    <section ref={containerRef} id="about" className="about-section">
       <div className="about-content" ref={ref}>
         <div className="hello-text">
           {letters.map((letter, index) => (

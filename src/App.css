@@ -13,6 +13,10 @@ body {
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .mouse-trail {
   position: fixed;
   top: 0;

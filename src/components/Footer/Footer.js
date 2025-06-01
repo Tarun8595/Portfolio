@@ -51,7 +51,13 @@ const Footer = () => {
   }
 
   // Navigation links data
-  const mainNavLinks = ["HOME", "ABOUT", "WORKS","CONTACT"]
+  const mainNavLinks = [
+  { label: "HOME", id: "home" },
+  { label: "ABOUT", id: "about" },
+  { label: "PROJECTS", id: "projects" },
+  { label: "CONTACT", id: "contact" }
+]
+
   const socialLinks = [
   { name: "Github", url: "https://github.com/Tarun8595" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" },
@@ -74,7 +80,7 @@ const Footer = () => {
           <div className="footer-grid">
             {/* Get In Touch Section */}
             <div className="footer-section footer-contact-section">
-              <p className="footer-get-touch">| Get Touch</p>
+              <p className="footer-get-touch">| Get In Touch</p>
               <p className="footer-line">Let’s collaborate and build something great</p>
               <p className="footer-contact-number">+ 91 8595703558</p>
             </div>
@@ -89,13 +95,14 @@ const Footer = () => {
                   <nav className="nav-list">
                     {mainNavLinks.map((item, index) => (
                       <a
-                        key={item}
-                        href={`#${item.toLowerCase()}`}
+                        key={item.id}
+                        href={`#${item.id}`}
                         className={`nav-link ${isVisible ? "animate" : ""}`}
-                        style={{ animationDelay: `${400 + index * 100}ms` }}
+                        style={{ animationDelay: `${1000 + index * 1000}ms` }}
                       >
-                        {item}
+                        {item.label}
                       </a>
+
                     ))}
                   </nav>
                 </div>

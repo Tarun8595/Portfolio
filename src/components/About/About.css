@@ -76,6 +76,7 @@
   max-width: 500px;
   margin-right: 2rem;
   text-align: start;
+  font-family: "Bebas Neue", serif;
 }
 
 .about-subheading{
@@ -113,6 +114,7 @@
   /* align-items: center; */
   padding-top: 2rem;
   border-top: 1px solid #eaeaea;
+  font-family: "Bebas Neue", serif;
 }
 
 .more-link {

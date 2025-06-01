@@ -77,7 +77,8 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     const FadeUp = batch(Fade(), Move(), Sticky());
   
     return (
-      <div className="my_Gallary">
+      <section id="gallery">
+        <div className="my_Gallary">
         <section className="Gallary_heading">
           <ParallaxText baseVelocity={-2}>Welcome To My Gallary</ParallaxText>
           <ParallaxText baseVelocity={2}>Scroll And Injoy</ParallaxText>
@@ -178,6 +179,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
           </ScrollPage>
         </ScrollContainer>
       </div>
+      </section>
     );
   }
   
