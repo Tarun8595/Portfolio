@@ -73,6 +73,7 @@ const Footer = () => {
   const socialLinks = [
     { name: "Github", url: "https://github.com/Tarun8595" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/tarun-kushwaha-7519a131a/" },
+    { name: "Resume", url: "/Tarun_Kushwaha_Resume.pdf" },
   ]
 
   return (

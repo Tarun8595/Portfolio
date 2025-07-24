@@ -34,11 +34,34 @@ export default function Contact() {
     setIsFormOpen(!isFormOpen)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted")
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("new_friend_name").value;
+  const email = document.getElementById("new_friend_mail").value;
+  const message = document.getElementById("new_friend_msg").value;
+
+  const payload = { name, email, message };
+
+  try {
+    const res = await fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("Message sent successfully!");
+      document.getElementById("contact-form").reset();
+    } else {
+      alert("Failed to send message: " + data.error);
+    }
+  } catch (err) {
+    alert("Error: " + err.message);
   }
+};
+
 
   const handleMouseEnter = () => {
     setIsHovering(true)
@@ -121,23 +144,24 @@ export default function Contact() {
                 <span className="form-title-script">Touch</span>
               </h2>
 
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form onSubmit={handleSubmit} className="contact-form" id="contact-form">
                 <div className="form-row">
-                  <input type="text" placeholder="Name" className="form-input" required />
-                  <input type="email" placeholder="Email" className="form-input" required />
+                  <input type="text" placeholder="Name" id="new_friend_name" className="form-input" required />
+                  <input type="email" placeholder="Email" id="new_friend_mail" className="form-input" required />
                 </div>
 
                 <textarea
-                  placeholder="What can I help you with?"
+                  placeholder="Write your message and take the first step in starting our conversation 😊"
                   className="form-textarea"
+                  id="new_friend_msg"
                   rows="6"
                   required
                 ></textarea>
 
                 <div className="form-checkbox">
-                  <input type="checkbox" id="privacy" required />
+                  <input type="checkbox" id="new_friend_privacy" required />
                   <label htmlFor="privacy">
-                    I've accepted the{" "}
+                    I've accepted the{""}
                     <a href="tarun_work" className="privacy-link">
                       privacy policy
                     </a>

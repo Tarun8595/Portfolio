@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Github } from "lucide-react";
+import { Linkedin, Github, Download } from "lucide-react";
 import "./Navbar.css";
 
 const MenuIcon = ({ isOpen, toggleMenu }) => (
@@ -175,6 +175,14 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 <Github size={32} />
+              </motion.a>
+              <motion.a
+                href="/Tarun_Kushwaha_Resume.pdf"
+                download="Tarun_Kushwaha_Resume.pdf"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Download size={32} />
               </motion.a>
             </motion.div>
           </motion.div>
