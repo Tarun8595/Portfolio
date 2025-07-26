@@ -98,7 +98,7 @@ const Navbar = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <a href="home"><img className="logo-img" src="tarun-robot.png" alt="Logo" /></a>
+        <a><img className="logo-img" src="tarun-robot.png" alt="Logo" /></a>
       </motion.div>
 
       <MenuIcon isOpen={isOpen} toggleMenu={toggleMenu} />
