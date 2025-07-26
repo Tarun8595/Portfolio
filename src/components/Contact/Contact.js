@@ -34,14 +34,20 @@ export default function Contact() {
     setIsFormOpen(!isFormOpen)
   }
 
+  const [isSending, setIsSending] = useState(false)
+
   const handleSubmit = async (e) => {
   e.preventDefault();
+
+  setIsSending(true);
+
 
   const name = document.getElementById("new_friend_name").value;
   const email = document.getElementById("new_friend_mail").value;
   const message = document.getElementById("new_friend_msg").value;
 
   const payload = { name, email, message };
+
 
   try {
     const res = await fetch("http://localhost:5000/send-email", {
@@ -51,8 +57,8 @@ export default function Contact() {
     });
 
     const data = await res.json();
+
     if (res.ok) {
-      alert("Message sent successfully!");
       document.getElementById("contact-form").reset();
     } else {
       alert("Failed to send message: " + data.error);
@@ -60,6 +66,8 @@ export default function Contact() {
   } catch (err) {
     alert("Error: " + err.message);
   }
+
+  setIsSending(false);
 };
 
 
@@ -143,6 +151,8 @@ export default function Contact() {
                 <span className="form-title-main">GET IN</span>
                 <span className="form-title-script">Touch</span>
               </h2>
+              
+              <div className="msg-sending-loader">{isSending && <p>Sending message... <img src="/msg-loader.gif" alt="msg-runner" className="msg-loader-img"></img></p>}</div>
 
               <form onSubmit={handleSubmit} className="contact-form" id="contact-form">
                 <div className="form-row">
