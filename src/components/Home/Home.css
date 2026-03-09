@@ -22,7 +22,7 @@ body {
   background-size: cover;
   /* background-position: center; */
   background-repeat: no-repeat;
-  background-image: url(/public/img_2977.jpg);
+  /* background-image: url(/public/img_2977.jpg); */
   opacity: 0;
   transform: translateY(-400px);
   transition: 0.5s;
